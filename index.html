@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kasih Maisara ♡</title>
+<style>
+:root{--lav:#e8d9ff;--deep:#7251a6;--ink:#45345d;--cream:#fffaff;--pink:#ffdff1}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:linear-gradient(145deg,#f8f0ff,#e9ddff 48%,#fff0fa);min-height:100vh;overflow-x:hidden}
+#stars{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.star{position:absolute;opacity:.7;animation:twinkle 3s infinite ease-in-out}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+.heart{position:fixed;bottom:-30px;z-index:1;pointer-events:none;animation:floatUp 8s linear forwards;opacity:.8}
+@keyframes floatUp{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:2;width:min(760px,92%);margin:auto;padding:28px 0 55px}
+.hero,.card{background:#ffffffc9;border:1px solid #fff;box-shadow:0 12px 38px #8566a51c;border-radius:26px;padding:25px;margin:16px 0;backdrop-filter:blur(8px)}
+.hero{text-align:center;padding:34px 22px}
+.kicker{letter-spacing:3px;text-transform:uppercase;font-size:.72rem;color:#9878bc}
+h1{font-size:clamp(2.2rem,9vw,4rem);line-height:1.05;margin:12px 0;color:#7654a6}
+h2{color:#7654a6;margin:0 0 12px}
+p{line-height:1.75}
+.small{font-size:.9rem;color:#7c6b8e}
+button{font:inherit;border:0;border-radius:999px;padding:12px 18px;background:#8b68ba;color:white;cursor:pointer;box-shadow:0 5px 0 #684a91;transition:transform .15s;margin:5px}
+button:active{transform:translateY(3px);box-shadow:0 2px 0 #684a91}
+button.secondary{background:#f5e9ff;color:#694c8c;box-shadow:0 4px 0 #dfc8f4}
+.hidden{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
+.tile{background:#f8efff;border:1px solid #ead8ff;border-radius:18px;padding:15px;text-align:center;cursor:pointer;color:#5d4678}
+.tile b{display:block;font-size:1.6rem;margin-bottom:5px}
+.message{background:#fff7fd;border-left:4px solid #c5a2ee;border-radius:12px;padding:14px;margin-top:12px;line-height:1.7}
+.photo-placeholder{border:2px dashed #cbb2e8;border-radius:20px;padding:28px 14px;text-align:center;background:#fbf7ff}
+footer{text-align:center;padding:18px;color:#8b78a0;font-size:.85rem}
+#letter{white-space:pre-line}
+label{display:block;font-size:.9rem;margin:10px 0 5px}
+input,textarea{width:100%;border:1px solid #dac6f0;border-radius:12px;padding:10px;font:inherit;background:#fffaff;color:var(--ink)}
+@media(max-width:480px){.hero,.card{padding:20px}.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<main>
+<section class="hero">
+  <div class="kicker">a tiny universe made for you ✦</div>
+  <h1>Kasih Maisara</h1>
+  <p>untuk ayang, lelaki kesayangan saya 💜</p>
+  <p class="small">walaupun kita jauh, saya tetap nak bagi awak satu tempat kecil yang penuh dengan kasih sayang saya.</p>
+  <button id="openGift">OPEN YOUR GIFT 💌</button>
+  <div id="welcome" class="message hidden">hiiii ayanggg 🥹💜 selamat datang ke dunia kecil kitaaa. saya buat semua ni khas untuk awak, jadi tekan-tekan semua benda tauuu. setiap satu ada sedikit kasih sayang daripada saya ✨</div>
+</section>
+
+<section class="card">
+  <h2>💜 a little reminder</h2>
+  <p>Ayang, jarak mungkin buat kita tak dapat selalu jalan-jalan bersama, tapi jarak tak boleh halang saya daripada menghargai awak. Saya harap website kecil ni boleh buat awak rasa disayangi, walaupun saya tak ada di sebelah awak sekarang.</p>
+</section>
+
+<section class="card">
+  <h2>🧸 reasons why I love you</h2>
+  <p class="small">tekan setiap kotak untuk buka satu sebab hehe ♡</p>
+  <div class="grid">
+    <button class="tile" data-msg="Saya sayang awak sebab awak ialah diri awak sendiri. Awak tak perlu jadi sempurna untuk layak disayangi.">💗<br>sebab pertama</button>
+    <button class="tile" data-msg="Saya sayang cara kita masih cuba bertahan dan memahami satu sama lain walaupun hubungan kita ada cabaran.">🌷<br>sebab kedua</button>
+    <button class="tile" data-msg="Saya sayang saat-saat kecil kita, termasuk main Roblox bersama dan buat kenangan walaupun dari jauh.">🎮<br>sebab ketiga</button>
+    <button class="tile" data-msg="Saya sayang awak sebab awak istimewa untuk saya. Saya harap awak tak lupa yang awak juga layak menerima kasih sayang dan kelembutan.">🌙<br>sebab keempat</button>
+  </div>
+  <div id="reasonMessage" class="message hidden"></div>
+</section>
+
+<section class="card">
+  <h2>💌 open when...</h2>
+  <p class="small">pilih surat yang ayang perlukan sekarang.</p>
+  <div class="grid">
+    <button class="tile" data-letter="miss">🥺<br>bila rindu saya</button>
+    <button class="tile" data-letter="sad">🫂<br>bila sedih</button>
+    <button class="tile" data-letter="enough">💜<br>bila rasa tak cukup baik</button>
+    <button class="tile" data-letter="fight">🕊️<br>bila kita bergaduh</button>
+  </div>
+  <div id="letterMessage" class="message hidden"></div>
+</section>
+
+<section class="card">
+  <h2>🎮 our little Roblox memories</h2>
+  <p>antara kenangan kegemaran saya ialah masa kita main Roblox sama-sama. Walaupun cuma dalam game, saya tetap hargai masa yang kita luangkan bersama. 💜</p>
+  <div class="photo-placeholder">
+    <div style="font-size:2.3rem">📸 🎮 💜</div>
+    <b>ruang gambar kita</b>
+    <p class="small">Nanti pilih gambar Roblox korang dan letakkan di sini. Arahan ringkas ada dalam fail yang saya sediakan.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>✉️ a letter from your girl</h2>
+  <p id="letter">ayanggg, saya nak awak tahu yang saya bersyukur sebab dapat kenal awak. Terima kasih sebab jadi sebahagian daripada hidup saya dan mencipta kenangan dengan saya, walaupun kita terpaksa berjauhan.
+
+Saya tahu hubungan kita tak semestinya mudah setiap masa. Ada hari kita rindu, ada hari kita salah faham, dan ada masa kita tak tahu macam mana nak terangkan apa yang kita rasa. Tapi saya harap kita akan terus belajar memahami satu sama lain dengan sabar.
+
+Ayang tak perlu jadi sempurna untuk saya sayang awak. Awak tak perlu sentiasa kuat atau sentiasa tahu apa yang perlu dibuat. Awak pun manusia yang ada perasaan, penat dan hari yang susah. Kalau satu hari awak rasa berat, berehatlah sekejap. Awak tak perlu buktikan nilai diri awak setiap masa.
+
+Kalau saya boleh minta satu benda, saya nak kita terus jujur, saling menghormati dan berusaha menjaga hubungan ni bersama-sama. Saya tak boleh janji setiap hari akan mudah, tapi saya nak kita sama-sama cuba menjadikan hari-hari susah lebih ringan.
+
+Sampai hari kita dapat berjumpa dan berjalan bersama nanti, simpanlah sedikit ruang untuk saya dalam hari awak. Saya akan simpan kenangan kita, termasuk gambar Roblox kita, sebagai perkara kecil yang buat saya tersenyum.
+
+terima kasih sebab jadi ayang saya. saya sayang awak, bukan sebab awak sempurna, tapi sebab awak ialah awak. 💜
+
+daripada,
+kasih maisara ♡</p>
+  <button class="secondary" id="copyLetter">COPY SURAT 💌</button>
+</section>
+
+<section class="card" style="text-align:center">
+  <h2>🌙 one last little surprise</h2>
+  <p>ayang, kalau awak sampai dekat sini, maksudnya awak dah buka semua hadiah kecil saya hehe.</p>
+  <button id="surprise">TEKAN UNTUK KEJUTAN 💜</button>
+  <div id="surpriseMessage" class="message hidden">💜✨ satu pelukan jauh untuk ayanggg! bayangkan saya peluk awak erat-erat sekarang. terima kasih sebab hadir dalam hidup saya. sampai kita dapat jumpa nanti, jaga diri baik-baik tau. awak disayangi, awak dihargai, dan awak sangat bermakna untuk saya. muahhh! 😚💜✨</div>
+</section>
+<footer>made with love by Kasih Maisara ♡ for ayang, always and gently ✦</footer>
+</main>
+<script>
+const starBox=document.getElementById('stars');
+for(let i=0;i<45;i++){let s=document.createElement('span');s.className='star';s.textContent=Math.random()>.5?'✦':'·';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.fontSize=(10+Math.random()*18)+'px';s.style.animationDelay=(Math.random()*3)+'s';starBox.appendChild(s)}
+function floatHeart(){let h=document.createElement('div');h.className='heart';h.textContent=['💜','♡','✦','🌙'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=(16+Math.random()*20)+'px';h.style.animationDuration=(6+Math.random()*5)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),11000)}
+setInterval(floatHeart,950);
+document.getElementById('openGift').onclick=()=>{document.getElementById('welcome').classList.remove('hidden');document.getElementById('welcome').scrollIntoView({behavior:'smooth',block:'center'})};
+document.querySelectorAll('[data-msg]').forEach(b=>b.onclick=()=>{let el=document.getElementById('reasonMessage');el.textContent=b.dataset.msg;el.classList.remove('hidden')});
+const letters={
+miss:'ayanggg, kalau awak tengah rindukan saya, cuba tarik nafas perlahan-lahan yaa. Saya pun berharap kita boleh dekat dan luangkan masa bersama. Buat masa sekarang, anggap website kecil ni macam pelukan daripada saya. Kita mungkin jauh, tapi kenangan dan usaha kita tetap bermakna. 💜',
+sad:'sayang, tak apa kalau hari ni awak tak okay. Awak tak perlu paksa diri untuk senyum atau pendam semuanya seorang diri. Rehat sekejap, minum air dan buat sesuatu yang boleh tenangkan hati awak. Kalau awak sedia, ceritalah apa yang awak rasa. Saya nak kita saling mendengar dengan lembut. 🫂',
+enough:'ayang, tolong ingat ni: nilai diri awak bukan ditentukan oleh satu kesilapan atau sama ada awak berjaya menggembirakan semua orang setiap masa. Awak tak perlu sempurna untuk layak disayangi. Saya sayang awak sebagai manusia yang sedang belajar dan membesar. Berlembutlah sedikit dengan diri sendiri ya. 💜',
+fight:'kalau kita tengah bergaduh, saya harap kita boleh berhenti sekejap, tenangkan hati dan bercakap semula dengan baik. Kita tak semestinya perlu setuju tentang semua benda, tapi perasaan kita berdua tetap patut dihormati. Saya nak kita selesaikan masalah bersama-sama, bukan saling menyakiti. ♡'
+};
+document.querySelectorAll('[data-letter]').forEach(b=>b.onclick=()=>{let el=document.getElementById('letterMessage');el.textContent=letters[b.dataset.letter];el.classList.remove('hidden')});
+document.getElementById('surprise').onclick=()=>document.getElementById('surpriseMessage').classList.toggle('hidden');
+document.getElementById('copyLetter').onclick=async()=>{try{await navigator.clipboard.writeText(document.getElementById('letter').innerText);document.getElementById('copyLetter').textContent='DAH COPY! 💜'}catch(e){alert('Tekan lama pada surat dan pilih Copy ya 💜')}};
+</script>
+</body>
+</html>
